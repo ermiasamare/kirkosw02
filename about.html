@@ -1,0 +1,471 @@
+<!-- Swiper Styles -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<section class="about-full-slider">
+  <div class="swiper aboutFullSwiper">
+    <div class="swiper-wrapper">
+
+      <!-- Slide 1: Mission -->
+      <div class="swiper-slide about-slide">
+        <div class="decorative-circle circle-1"></div>
+        <div class="slide-inner">
+          <div class="text-content">
+            <h2>Our Mission</h2>
+            <p>We are committed to ensuring safe, compliant, and sustainable construction through effective permit issuance and regulatory oversight.</p>
+            <ul>
+              <li>Transparent permit processing</li>
+              <li>Strict compliance enforcement</li>
+              <li>Modern, efficient service delivery</li>
+            </ul>
+          </div>
+          <div class="image-content">
+            <img src="assets/img/photo_2025-05-15_15-51-10.jpg" alt="Our Mission">
+          </div>
+        </div>
+        <div class="decorative-circle circle-2"></div>
+      </div>
+
+      <!-- Slide 2: Impact -->
+      <div class="swiper-slide about-slide">
+        <div class="slide-inner center">
+          <div class="text-content">
+            <h2>Our Impact</h2>
+            <p>Our work supports safe urban development and helps protect citizens through regulated construction activity.</p>
+          </div>
+          <div class="stats">
+            <div class="stat-card">
+              <h3>10,000+</h3>
+              <p>Permits Issued</p>
+            </div>
+            <div class="stat-card">
+              <h3>95%</h3>
+              <p>Approval Efficiency Rate</p>
+            </div>
+            <div class="stat-card">
+              <h3>1,200+</h3>
+              <p>Inspections Conducted Monthly</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Call to Action -->
+      <div class="swiper-slide about-slide">
+        <div class="slide-inner center">
+          <div class="cta-content">
+            <h2>Start Your Permit Process Today</h2>
+            <p>Apply for construction permits online, track your application, and access all necessary regulations in one platform.</p>
+            <div class="cta-buttons">
+              <a href="#apply" class="btn btn-primary">Apply for Permit</a>
+              <a href="#contact" class="btn btn-secondary">Contact Support</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Swiper Controls -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<!-- Swiper Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const aboutSwiper = new Swiper('.aboutFullSwiper', {
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+  });
+</script>
+
+
+
+
+
+
+<style>
+  
+  :root {
+  --primary: #293896;
+  --secondary: #f79133;
+  --accent: #e63946;
+  --primary-dark: #1d2c6b;
+  --light-blue: #a8dadc;
+  --cream: #f1faee;
+  --gray: #555;
+  --light: #f4f4f4;
+  --dark: #1a1a2e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--cream);
+  overflow-x: hidden;
+}
+
+.about-full-slider {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(135deg, var(--light) 0%, var(--light-blue) 100%);
+}
+
+.aboutFullSwiper .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 60px;
+  box-sizing: border-box;
+}
+
+.slide-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  gap: 40px;
+  position: relative;
+}
+
+.slide-inner.center {
+  flex-direction: column;
+  text-align: center;
+}
+
+.text-content {
+  flex: 1 1 50%;
+  min-width: 300px;
+  z-index: 2;
+}
+
+.text-content h2 {
+  font-size: 3rem;
+  margin-bottom: 25px;
+  color: var(--primary-dark);
+  position: relative;
+}
+
+.text-content h2:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 70px;
+  height: 5px;
+  background: var(--secondary);
+  border-radius: 3px;
+}
+
+.slide-inner.center .text-content h2:after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.text-content p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: var(--dark);
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.text-content ul {
+  list-style: none;
+}
+
+.text-content ul li {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  padding-left: 30px;
+  position: relative;
+  color: var(--gray);
+}
+
+.text-content ul li:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: var(--secondary);
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.image-content {
+  flex: 1 1 40%;
+  text-align: center;
+  position: relative;
+}
+
+.image-content img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  border: 5px solid white;
+  transform: rotate(-3deg);
+  transition: transform 0.3s ease;
+}
+
+.image-content:hover img {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.image-content:before,
+.image-content:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.image-content:before {
+  width: 150px;
+  height: 150px;
+  background-color: var(--accent);
+  opacity: 0.1;
+  border-radius: 30px;
+  top: -20px;
+  left: -20px;
+}
+
+.image-content:after {
+  width: 100px;
+  height: 100px;
+  background-color: var(--primary);
+  opacity: 0.1;
+  border-radius: 50%;
+  bottom: -20px;
+  right: -20px;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.stat-card {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.stat-card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+.stat-card h3 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.stat-card p {
+  font-size: 1.1rem;
+  color: var(--gray);
+  font-weight: 500;
+}
+
+.cta-content {
+  max-width: 800px;
+  background: rgba(255,255,255,0.9);
+  padding: 60px;
+  border-radius: 30px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.cta-content h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: var(--primary-dark);
+}
+
+.cta-content p {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  color: var(--gray);
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 15px 35px;
+  border-radius: 50px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #e07d22;
+}
+
+.aboutFullSwiper .swiper-button-next,
+.aboutFullSwiper .swiper-button-prev {
+  color: white;
+  background-color: var(--primary);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.aboutFullSwiper .swiper-button-next:hover,
+.aboutFullSwiper .swiper-button-prev:hover {
+  background-color: var(--secondary);
+  transform: scale(1.1);
+}
+
+.aboutFullSwiper .swiper-button-next:after,
+.aboutFullSwiper .swiper-button-prev:after {
+  font-size: 1.5rem;
+}
+
+.aboutFullSwiper .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: white;
+  opacity: 0.8;
+  border: 2px solid var(--primary);
+}
+
+.aboutFullSwiper .swiper-pagination-bullet-active {
+  background: var(--secondary);
+  border-color: var(--secondary);
+  transform: scale(1.2);
+}
+
+.decorative-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.circle-1 {
+  width: 300px;
+  height: 300px;
+  background-color: var(--accent);
+  top: -100px;
+  right: -100px;
+}
+
+.circle-2 {
+  width: 200px;
+  height: 200px;
+  background-color: var(--secondary);
+  bottom: -50px;
+  left: -50px;
+}
+
+@media (max-width: 768px) {
+  .aboutFullSwiper .swiper-slide {
+    padding: 30px 20px;
+  }
+
+  .slide-inner {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .text-content, .image-content {
+    flex: 1 1 100%;
+  }
+
+  .text-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .cta-content {
+    padding: 30px 20px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+</style>
